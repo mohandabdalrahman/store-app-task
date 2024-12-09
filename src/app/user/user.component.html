@@ -1,0 +1,20 @@
+<div class="user-container">
+  <h2>Product Categories</h2>
+
+  <div *ngIf="loading()" class="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngFor="let category of categories" class="category">
+    <h3>{{ category }}</h3>
+    <div class="products">
+      <mat-card *ngFor="let product of productsByCategory[category]">
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ product.description }}</p>
+          <p>Price: {{ product.price | currency }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
