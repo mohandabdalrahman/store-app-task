@@ -1,0 +1,22 @@
+{
+  "header": {
+    "storeApp": "Store App",
+    "userDashboard": "User Dashboard",
+    "adminDashboard": "Admin Dashboard",
+    "logout": "Logout",
+    "language": {
+      "english": "English",
+      "arabic": "Arabic"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Store App. All rights reserved."
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Login",
+    "error": "Invalid username or password"
+  }
+}

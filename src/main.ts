@@ -1,6 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
+import { TranslateService } from '@ngx-translate/core';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, appConfig).then(appRef => {
+  const translate = appRef.injector.get(TranslateService);
+  translate.setDefaultLang('en');
+  translate.use('en'); // Set the initial language to English
+});
