@@ -1,0 +1,49 @@
+.header-toolbar {
+  background: linear-gradient(90deg, #3f51b5, #2196f3);
+  color: white;
+  padding: 0 1rem;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .language-dropdown {
+    width: 150px;
+    margin-right: 1rem;
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+
+    .mat-select-value {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  mat-icon {
+    color: white;
+  }
+}
