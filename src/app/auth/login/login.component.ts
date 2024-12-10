@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {AuthService} from "../auth.service";
@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
 import {TranslatePipe} from "@ngx-translate/core";
 import {MatInput} from "@angular/material/input";
 import {MatButton} from "@angular/material/button";
-import {NgIf} from "@angular/common";
+
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {MatIcon} from "@angular/material/icon";
 
@@ -19,23 +19,23 @@ import {MatIcon} from "@angular/material/icon";
     TranslatePipe,
     MatInput,
     MatButton,
-    NgIf,
     MatLabel,
     MatCard,
     MatCardHeader,
     MatCardContent,
     MatIcon,
     MatCardTitle
-  ],
+],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  private authService = inject(AuthService);
+  private router = inject(Router);
+
   username: string = '';
   password: string = '';
   errorMessage: string = '';
-
-  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
     if (this.authService.login(this.username, this.password)) {

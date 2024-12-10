@@ -1,11 +1,13 @@
 // auth.service.ts
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private router = inject(Router);
+
   private users = [
     { username: 'user', password: 'user', role: 'user' },
     { username: 'admin', password: 'admin', role: 'admin' }
@@ -28,6 +30,4 @@ export class AuthService {
   getRole(): string | null {
     return localStorage.getItem('role');
   }
-
-  constructor(private router: Router) {}
 }

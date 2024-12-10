@@ -4,13 +4,7 @@
     "userDashboard": "User Dashboard",
     "adminDashboard": "Admin Dashboard",
     "logout": "Logout",
-    "language": {
-      "english": "English",
-      "arabic": "Arabic"
-    }
-  },
-  "footer": {
-    "copyright": "© {{year}} Store App. All rights reserved."
+    "language": "Language"
   },
   "login": {
     "title": "Login",
@@ -18,5 +12,34 @@
     "password": "Password",
     "submit": "Login",
     "error": "Invalid username or password"
+  },
+  "footer": {
+    "contact": "Contact Us",
+    "about": "About Us",
+    "privacy": "Privacy Policy",
+    "social": "Follow Us",
+    "copyright": "© {{year}} Store App. All rights reserved."
+  },
+  "user": {
+    "productCategories": "Product Categories",
+    "loading": "Loading...",
+    "noProducts": "No products available."
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "productList": "Product List",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "id": "ID",
+    "title": "Title",
+    "category": "Category",
+    "price": "Price",
+    "image": "Image",
+    "actions": "Actions"
+  },
+  "errors": {
+    "pageNotFound": "Page not found",
+    "unauthorized": "You are not authorized to access this page."
   }
 }

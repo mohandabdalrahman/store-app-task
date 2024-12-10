@@ -1,21 +1,34 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {CurrencyPipe, NgForOf, NgIf} from "@angular/common";
+import { CurrencyPipe } from "@angular/common";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
-import {MatCard, MatCardContent, MatCardTitle} from "@angular/material/card";
+import {
+  MatCard,
+  MatCardActions,
+  MatCardContent,
+  MatCardHeader,
+  MatCardImage,
+  MatCardTitle
+} from "@angular/material/card";
 import {ProductService} from "../services/product.service";
 import {forkJoin} from "rxjs";
+import {MatButton} from "@angular/material/button";
+import {TranslatePipe} from "@ngx-translate/core";
+import {Product} from "../models/product.model";
 
 @Component({
   selector: 'app-user',
   standalone: true,
   imports: [
-    NgIf,
     MatProgressSpinner,
-    NgForOf,
     MatCard,
     MatCardTitle,
     MatCardContent,
-    CurrencyPipe
+    CurrencyPipe,
+    MatCardImage,
+    MatCardActions,
+    MatButton,
+    MatCardHeader,
+    TranslatePipe
   ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
@@ -44,7 +57,7 @@ export class UserComponent implements OnInit {
     );
 
     forkJoin(productObservables).subscribe(productsArray => {
-      productsArray.forEach((products, index) => {
+      productsArray.forEach((products: Product[], index) => {
         this.productsByCategory[this.categories[index]] = products;
       });
       this.loading.set(false);

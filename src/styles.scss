@@ -7,8 +7,8 @@ body {
 }
 
 .content {
-  flex: 1;
   padding: 20px;
+  margin-bottom: 5rem;
 }
 
 .loading {
@@ -18,16 +18,10 @@ body {
   height: 100px;
 }
 
-.category {
-  margin-bottom: 20px;
 
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-
-    mat-card {
-      width: 250px;
-    }
-  }
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }

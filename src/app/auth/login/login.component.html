@@ -20,10 +20,12 @@
           <button mat-raised-button color="primary" type="submit">{{ 'login.submit' | translate }}</button>
         </div>
 
-        <div *ngIf="errorMessage" class="error-message">
-          <mat-icon color="warn">error</mat-icon>
-          {{ 'login.error' | translate }}
-        </div>
+        @if (errorMessage) {
+          <div class="error-message">
+            <mat-icon color="warn">error</mat-icon>
+            {{ 'login.error' | translate }}
+          </div>
+        }
       </form>
     </mat-card-content>
   </mat-card>

@@ -4,13 +4,7 @@
     "userDashboard": "لوحة تحكم المستخدم",
     "adminDashboard": "لوحة تحكم المدير",
     "logout": "تسجيل الخروج",
-    "language": {
-      "english": "الإنجليزية",
-      "arabic": "العربية"
-    }
-  },
-  "footer": {
-    "copyright": "© {{year}} متجر التطبيقات. جميع الحقوق محفوظة."
+    "language": "اللغة"
   },
   "login": {
     "title": "تسجيل الدخول",
@@ -18,5 +12,34 @@
     "password": "كلمة المرور",
     "submit": "تسجيل الدخول",
     "error": "اسم المستخدم أو كلمة المرور غير صحيحة"
+  },
+  "footer": {
+    "contact": "اتصل بنا",
+    "about": "معلومات عنا",
+    "privacy": "سياسة الخصوصية",
+    "social": "تابعنا",
+    "copyright": "© {{year}} متجر التطبيقات. جميع الحقوق محفوظة."
+  },
+  "user": {
+    "productCategories": "فئات المنتجات",
+    "loading": "جاري التحميل...",
+    "noProducts": "لا توجد منتجات متاحة."
+  },
+  "admin": {
+    "dashboard": "لوحة تحكم المدير",
+    "productList": "قائمة المنتجات",
+    "addProduct": "إضافة منتج",
+    "editProduct": "تعديل المنتج",
+    "deleteProduct": "حذف المنتج",
+    "id": "المعرف",
+    "title": "العنوان",
+    "category": "الفئة",
+    "price": "السعر",
+    "image": "الصورة",
+    "actions": "الإجراءات"
+  },
+  "errors": {
+    "pageNotFound": "الصفحة غير موجودة",
+    "unauthorized": "غير مسموح لك بالوصول إلى هذه الصفحة."
   }
 }

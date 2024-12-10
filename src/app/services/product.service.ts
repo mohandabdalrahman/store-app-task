@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -6,16 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiBase = 'https://fakestoreapi.com';
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) {}
+  private apiBase = 'https://fakestoreapi.com';
 
   getCategories(): Observable<string[]> {
     return this.http.get<string[]>(`${this.apiBase}/products/categories`);
   }
 
-  getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiBase}/products`);
+  getProducts(page: number, size:number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiBase}/products?page=${page}&limit=${size}`);
   }
 
   getProductsByCategory(category: string): Observable<any[]> {
